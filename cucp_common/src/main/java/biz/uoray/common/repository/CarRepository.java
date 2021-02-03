@@ -1,5 +1,6 @@
 package biz.uoray.common.repository;
 
+import biz.uoray.common.entity.Car;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
