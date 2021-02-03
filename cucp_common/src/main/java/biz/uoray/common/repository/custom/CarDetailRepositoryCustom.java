@@ -1,6 +1,8 @@
 package biz.uoray.common.repository.custom;
 
-import biz.uoray.api.entity.Store;
+import biz.uoray.common.entity.Car;
+import biz.uoray.common.entity.CarDetail;
+import biz.uoray.common.entity.Store;
 
 import java.util.List;
 

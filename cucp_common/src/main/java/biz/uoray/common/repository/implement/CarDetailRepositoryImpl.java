@@ -1,7 +1,10 @@
 package biz.uoray.common.repository.implement;
 
-import biz.uoray.api.entity.Store;
-import biz.uoray.api.repository.custom.CarDetailRepositoryCustom;
+import biz.uoray.common.entity.Car;
+import biz.uoray.common.entity.CarDetail;
+import biz.uoray.common.entity.Store;
+import biz.uoray.common.repository.custom.CarDetailRepositoryCustom;
+import biz.uoray.common.repository.custom.CarDetailRepositoryCustom;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
