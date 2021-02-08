@@ -1,4 +1,4 @@
-package biz.uoray.common.constant;
+package biz.uoray.cucp.constant;
 
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;

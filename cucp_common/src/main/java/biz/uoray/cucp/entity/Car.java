@@ -1,10 +1,9 @@
-package biz.uoray.common.entity;
+package biz.uoray.cucp.entity;
 
 import lombok.Data;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.List;
 
 @Entity
 @Data

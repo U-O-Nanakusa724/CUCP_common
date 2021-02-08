@@ -1,6 +1,6 @@
-package biz.uoray.common.repository;
+package biz.uoray.cucp.repository;
 
-import biz.uoray.common.entity.CarDetail;
+import biz.uoray.cucp.entity.CarDetail;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

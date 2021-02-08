@@ -1,44 +1,37 @@
-package biz.uoray.common.entity;
+package biz.uoray.cucp.entity;
 
 import lombok.Data;
 
 import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 @Data
-@Table(name = "prices")
-
-public class Price extends AbstractEntity {
+@Table(name = "stores")
+public class Store extends AbstractEntity {
 
     /**
      * デフォルトコンストラクタ
      */
-    public Price() {
+    public Store() {
     }
 
     /**
-     * 新規作成・更新用コンストラクタ
+     * 新規登録、更新用のコンストラクタ
+     *
+     * @param name
      */
-    public Price(CarDetail carDetail, double price, Date date) {
-        this.carDetail = carDetail;
-        this.price = price;
-        this.date = date;
+    public Store(String name) {
+        this.name = name;
     }
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @ManyToOne
-    @JoinColumn(name = "car_detail_id")
-    private CarDetail carDetail;
-
-    @Column(name = "price")
-    private double price;
-
-    @Column(name = "date")
-    private Date date;
+    @Column(name = "name")
+    private String name;
 
     @Temporal(TemporalType.DATE)
     @Column(name = "created_at")
@@ -51,6 +44,9 @@ public class Price extends AbstractEntity {
     @Temporal(TemporalType.DATE)
     @Column(name = "deleted_at")
     private Date deletedAt;
+
+    @OneToMany(mappedBy = "store", fetch = FetchType.LAZY)
+    private List<CarDetail> carDetailList;
 
     // Getter
     @Override

@@ -1,6 +1,6 @@
-package biz.uoray.common.util;
+package biz.uoray.cucp.util;
 
-import biz.uoray.common.constant.Constants;
+import biz.uoray.cucp.constant.Constants;
 
 import java.time.LocalDateTime;
 import java.util.Date;

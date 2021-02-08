@@ -1,8 +1,8 @@
-package biz.uoray.common.repository.custom;
+package biz.uoray.cucp.repository.custom;
 
-import biz.uoray.common.entity.Car;
-import biz.uoray.common.entity.CarDetail;
-import biz.uoray.common.entity.Store;
+import biz.uoray.cucp.entity.Car;
+import biz.uoray.cucp.entity.CarDetail;
+import biz.uoray.cucp.entity.Store;
 
 import java.util.List;
 

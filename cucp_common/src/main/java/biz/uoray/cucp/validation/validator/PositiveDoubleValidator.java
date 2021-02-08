@@ -1,6 +1,6 @@
-package biz.uoray.common.validation.validator;
+package biz.uoray.cucp.validation.validator;
 
-import biz.uoray.common.validation.PositiveDouble;
+import biz.uoray.cucp.validation.PositiveDouble;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
