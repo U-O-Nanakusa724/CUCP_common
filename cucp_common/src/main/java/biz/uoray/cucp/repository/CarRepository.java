@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface  CarRepository extends JpaRepository<Car, Integer> {
+public interface CarRepository extends JpaRepository<Car, Integer> {
 
     @Query(value = "SELECT c FROM Car c WHERE c.deletedAt IS NULL")
     Page<Car> findActive(Pageable pageable);
