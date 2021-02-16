@@ -1,6 +1,7 @@
 package biz.uoray.cucp.entity;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -8,6 +9,7 @@ import java.util.List;
 
 @Entity
 @Data
+@EqualsAndHashCode(callSuper=false)
 @Table(name = "car_details")
 public class CarDetail extends AbstractEntity {
 
@@ -30,7 +32,7 @@ public class CarDetail extends AbstractEntity {
     private double distance;
 
     @Column(name = "transmission")
-    private String transmission;
+    private String mission;
 
     @Column(name = "model_year")
     private String modelYear;
