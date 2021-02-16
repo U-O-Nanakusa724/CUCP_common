@@ -10,9 +10,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface CarDetailRepository extends JpaRepository<CarDetail, Integer> {
 
-    @Query(value = "SELECT cd FROM CarDetail cd " +
-            " INNER JOIN FETCH cd.car c " +
-            " WHERE cd.deletedAt IS NULL ")
-    public Page<CarDetail> findActive(Pageable pageable);
+    @Query(value = "SELECT cd FROM CarDetail cd INNER JOIN FETCH cd.car c WHERE cd.deletedAt IS NULL ")
+    Page<CarDetail> findActive(Pageable pageable);
 
 }
