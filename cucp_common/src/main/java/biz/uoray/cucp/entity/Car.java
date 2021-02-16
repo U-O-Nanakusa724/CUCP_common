@@ -1,12 +1,14 @@
 package biz.uoray.cucp.entity;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
 @Data
+@EqualsAndHashCode(callSuper=false)
 @Table(name = "cars")
 public class Car extends AbstractEntity {
 

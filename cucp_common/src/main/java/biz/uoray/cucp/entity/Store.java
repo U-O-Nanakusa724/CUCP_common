@@ -1,6 +1,7 @@
 package biz.uoray.cucp.entity;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -8,6 +9,7 @@ import java.util.List;
 
 @Entity
 @Data
+@EqualsAndHashCode(callSuper=false)
 @Table(name = "stores")
 public class Store extends AbstractEntity {
 
