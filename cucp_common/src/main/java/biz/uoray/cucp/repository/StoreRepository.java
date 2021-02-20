@@ -1,17 +1,21 @@
 package biz.uoray.cucp.repository;
 
-import biz.uoray.cucp.entity.Store;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
+
+import biz.uoray.cucp.entity.Store;
 
 @Repository
 public interface StoreRepository extends JpaRepository<Store, Integer> {
 
-    /**
-     * storeテーブルを販売店名でselect
-     *
-     * @param name
-     * @return
-     */
-    public Store findByName(String name);
+    @Query(value = "SELECT s FROM Store s WHERE s.deletedAt IS NULL")
+    Page<Store> findActive(Pageable pageable);
+
+    @Query(value = "SELECT s FROM Store s WHERE s.name LIKE %:keyword% AND s.deletedAt IS NULL")
+    Page<Store> searchByName(Pageable pageable,
+    		                 @Param("keyword") String keyword);
 }
