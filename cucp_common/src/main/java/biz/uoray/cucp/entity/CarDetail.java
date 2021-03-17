@@ -29,7 +29,7 @@ public class CarDetail extends AbstractEntity {
     private String color;
 
     @Column(name = "distance")
-    private double distance;
+    private String distance;
 
     @Column(name = "transmission")
     private String mission;
@@ -42,6 +42,9 @@ public class CarDetail extends AbstractEntity {
 
     @Column(name = "note")
     private String note;
+
+    @Column(name = "sold_flag")
+    private boolean soldFlag;
 
     @Temporal(TemporalType.DATE)
     @Column(name = "created_at")
