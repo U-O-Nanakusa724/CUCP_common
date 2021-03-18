@@ -8,6 +8,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 @Repository
 public interface CarRepository extends JpaRepository<Car, Integer> {
 
@@ -21,4 +23,7 @@ public interface CarRepository extends JpaRepository<Car, Integer> {
     @Query(value = "SELECT c FROM Car c WHERE c.name LIKE %:keyword% AND c.deletedAt IS NULL")
     Page<Car> searchByName(Pageable pageable,
                            @Param("keyword") String keyword);
+
+    @Query(value = "SELECT c FROM Car c WHERE c.id = :id AND c.deletedAt IS NULL")
+    Car findActiveById(@Param("id") Integer id);
 }
