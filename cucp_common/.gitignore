@@ -36,4 +36,11 @@ out/
 ### VS Code ###
 .vscode/
 
+### logs ###
 logs
+
+### ERのバックアップ ###
+DB/*.mwb.bak
+
+### apprication-pro.yml
+src/main/resources/application-pro.yml
