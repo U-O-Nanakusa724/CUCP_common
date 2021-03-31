@@ -5,46 +5,23 @@ import lombok.EqualsAndHashCode;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.List;
 
 @Entity
 @Data
 @EqualsAndHashCode(callSuper=false)
-@Table(name = "car_details")
-public class CarDetail extends AbstractEntity {
+@Table(name = "grades")
+public class Grade extends AbstractEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "grade_id")
-    private Grade grade;
+    @JoinColumn(name = "car_id")
+    private Car car;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "store_id")
-    private Store store;
-
-    @Column(name = "color")
-    private String color;
-
-    @Column(name = "distance")
-    private String distance;
-
-    @Column(name = "transmission")
-    private String mission;
-
-    @Column(name = "model_year")
-    private String modelYear;
-
-    @Column(name = "url")
-    private String url;
-
-    @Column(name = "note")
-    private String note;
-
-    @Column(name = "sold_flag")
-    private boolean soldFlag;
+    @Column(name = "grade")
+    private String grade;
 
     @Temporal(TemporalType.DATE)
     @Column(name = "created_at")
@@ -57,9 +34,6 @@ public class CarDetail extends AbstractEntity {
     @Temporal(TemporalType.DATE)
     @Column(name = "deleted_at")
     private Date deletedAt;
-
-    @OneToMany(mappedBy = "carDetail", fetch = FetchType.LAZY)
-    private List<Price> priceList;
 
     // Getter
     @Override
@@ -82,5 +56,4 @@ public class CarDetail extends AbstractEntity {
     public void setUpdatedAt(Date updatedAt) {
         this.updatedAt = updatedAt;
     }
-
 }

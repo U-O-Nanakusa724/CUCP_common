@@ -1,3 +1,9 @@
-INSERT INTO `cucp`.`cars` (`id`, `code`, `name`, `created_at`, `updated_at`) VALUES ('1', 'car01', '車01', now(), now());
-INSERT INTO `cucp`.`cars` (`id`, `code`, `name`, `created_at`, `updated_at`) VALUES ('2', 'car02', '車02', now(), now());
-INSERT INTO `cucp`.`cars` (`id`, `code`, `name`, `created_at`, `updated_at`) VALUES ('3', 'car03', '車03', now(), now());
+INSERT INTO `cucp`.`cars` (`id`, `name`, `created_at`, `updated_at`) VALUES ('1', 'メルセデス・ベンツ', now(), now());
+INSERT INTO `cucp`.`cars` (`id`, `name`, `created_at`, `updated_at`) VALUES ('2', 'BMW', now(), now());
+INSERT INTO `cucp`.`cars` (`id`, `name`, `created_at`, `updated_at`) VALUES ('3', 'フォルクスワーゲン', now(), now());
+INSERT INTO `cucp`.`cars` (`id`, `name`, `created_at`, `updated_at`) VALUES ('4', 'アウディ', now(), now());
+INSERT INTO `cucp`.`cars` (`id`, `name`, `created_at`, `updated_at`) VALUES ('5', 'ミニ', now(), now());
+INSERT INTO `cucp`.`cars` (`id`, `name`, `created_at`, `updated_at`) VALUES ('6', 'ポルシェ', now(), now());
+INSERT INTO `cucp`.`cars` (`id`, `name`, `created_at`, `updated_at`) VALUES ('7', 'ボルボ', now(), now());
+INSERT INTO `cucp`.`cars` (`id`, `name`, `created_at`, `updated_at`) VALUES ('8', 'プジョー', now(), now());
+INSERT INTO `cucp`.`cars` (`id`, `name`, `created_at`, `updated_at`) VALUES ('9', 'ランドローバー', now(), now());
