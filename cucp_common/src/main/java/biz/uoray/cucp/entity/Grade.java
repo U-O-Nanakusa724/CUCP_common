@@ -9,23 +9,19 @@ import java.util.Date;
 @Entity
 @Data
 @EqualsAndHashCode(callSuper=false)
-@Table(name = "prices")
-
-public class Price extends AbstractEntity {
+@Table(name = "grades")
+public class Grade extends AbstractEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @ManyToOne
-    @JoinColumn(name = "car_detail_id")
-    private CarDetail carDetail;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "car_id")
+    private Car car;
 
-    @Column(name = "price")
-    private double price;
-
-    @Column(name = "date")
-    private Date date;
+    @Column(name = "grade")
+    private String grade;
 
     @Temporal(TemporalType.DATE)
     @Column(name = "created_at")
@@ -60,5 +56,4 @@ public class Price extends AbstractEntity {
     public void setUpdatedAt(Date updatedAt) {
         this.updatedAt = updatedAt;
     }
-
 }

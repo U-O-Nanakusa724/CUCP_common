@@ -20,21 +20,6 @@ import lombok.EqualsAndHashCode;
 @Table(name = "stores")
 public class Store extends AbstractEntity {
 
-    /**
-     * デフォルトコンストラクタ
-     */
-    public Store() {
-    }
-
-    /**
-     * 新規登録、更新用のコンストラクタ
-     *
-     * @param name
-     */
-    public Store(String name) {
-        this.name = name;
-    }
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;

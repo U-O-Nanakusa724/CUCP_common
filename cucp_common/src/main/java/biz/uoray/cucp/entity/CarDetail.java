@@ -18,8 +18,8 @@ public class CarDetail extends AbstractEntity {
     private Integer id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "car_id")
-    private Car car;
+    @JoinColumn(name = "grade_id")
+    private Grade grade;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "store_id")

@@ -18,4 +18,7 @@ public interface StoreRepository extends JpaRepository<Store, Integer> {
     @Query(value = "SELECT s FROM Store s WHERE s.name LIKE %:keyword% AND s.deletedAt IS NULL")
     Page<Store> searchByName(Pageable pageable,
     		                 @Param("keyword") String keyword);
+
+    @Query(value = "SELECT s FROM Store s WHERE s.id = :id AND s.deletedAt IS NULL")
+    Store findActiveById(@Param("id") Integer id);
 }

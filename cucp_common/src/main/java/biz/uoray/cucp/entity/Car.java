@@ -20,28 +20,9 @@ import lombok.EqualsAndHashCode;
 @Table(name = "cars")
 public class Car extends AbstractEntity {
 
-    /**
-     * デフォルトコンストラクタ
-     */
-    public Car() {
-    }
-
-    /**
-     * 新規作成・更新用コンストラクタ
-     *
-     * @param name
-     */
-    public Car(String code, String name) {
-        this.code = code;
-        this.name = name;
-    }
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
-    @Column(name = "code")
-    private String code;
 
     @Column(name = "name")
     private String name;
