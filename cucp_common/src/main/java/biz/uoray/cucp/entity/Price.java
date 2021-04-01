@@ -13,21 +13,6 @@ import java.util.Date;
 
 public class Price extends AbstractEntity {
 
-    /**
-     * デフォルトコンストラクタ
-     */
-    public Price() {
-    }
-
-    /**
-     * 新規作成・更新用コンストラクタ
-     */
-    public Price(CarDetail carDetail, double price, Date date) {
-        this.carDetail = carDetail;
-        this.price = price;
-        this.date = date;
-    }
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
