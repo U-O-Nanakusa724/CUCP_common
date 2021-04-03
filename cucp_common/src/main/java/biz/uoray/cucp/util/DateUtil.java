@@ -23,7 +23,7 @@ public class DateUtil {
 
         List<String> ldtList = dateList.stream()
                 .map(d -> {
-                    LocalDateTime ldt = LocalDateTime.ofInstant(d.toInstant(), Constants.ZONE_TIME);
+                    LocalDateTime ldt = LocalDateTime.ofInstant(d.toInstant(), Constants.DEFAULT_ZONE_ID);
                     return ldt.format(Constants.DATE_FORMAT);
                 })
                 .collect(Collectors.toList());
@@ -39,7 +39,7 @@ public class DateUtil {
      */
     public static String getLDT(Date date) {
 
-        LocalDateTime ldt = LocalDateTime.ofInstant(date.toInstant(), Constants.ZONE_TIME);
+        LocalDateTime ldt = LocalDateTime.ofInstant(date.toInstant(), Constants.DEFAULT_ZONE_ID);
         return ldt.format(Constants.DATE_FORMAT);
 
     }

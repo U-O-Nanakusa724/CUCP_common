@@ -35,7 +35,7 @@ public class CarDetail extends AbstractEntity {
     private String mission;
 
     @Column(name = "model_year")
-    private String modelYear;
+    private Date modelYear;
 
     @Column(name = "url")
     private String url;
