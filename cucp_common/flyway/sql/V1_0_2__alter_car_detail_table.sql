@@ -9,4 +9,9 @@ DROP INDEX `fk_car_details_cars1_idx`,
 ADD COLUMN `grade_id` INT UNSIGNED NOT NULL AFTER `id`,
 ADD INDEX `fk_car_details_grades1_idx` (`grade_id` ASC),
 ADD CONSTRAINT `fk_car_details_grades1`
-FOREIGN KEY (`grade_id`) REFERENCES `cucp`.`grades` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+FOREIGN KEY (`grade_id`) REFERENCES `cucp`.`grades` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+DROP COLUMN `color`,
+ADD COLUMN `color_id` INT UNSIGNED NOT NULL AFTER `store_id`,
+ADD INDEX `fk_car_details_colors1_idx` (`color_id` ASC),
+ADD CONSTRAINT `fk_car_details_colors1`
+FOREIGN KEY (`color_id`) REFERENCES `cucp`.`colors` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;

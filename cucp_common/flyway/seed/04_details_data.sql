@@ -1,3 +1,0 @@
-INSERT INTO `cucp`.`car_details` (`id`, `grade_id`, `store_id`, `color`, `distance`, `transmission`, `model_year`, `note`, `created_at`, `updated_at`) VALUES ('1', '1', '1', '赤', '3.0', 'MT', '20100101', '備考', now(), now());
-INSERT INTO `cucp`.`car_details` (`id`, `grade_id`, `store_id`, `color`, `distance`, `transmission`, `model_year`, `note`, `created_at`, `updated_at`) VALUES ('2', '1', '2', '青', '6.0', 'MT', '20170101', '備考', now(), now());
-INSERT INTO `cucp`.`car_details` (`id`, `grade_id`, `store_id`, `color`, `distance`, `transmission`, `model_year`, `note`, `created_at`, `updated_at`) VALUES ('3', '1', '3', '黒', '4.0', 'MT', '20140101', '備考', now(), now());
