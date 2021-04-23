@@ -8,6 +8,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 @Repository
 public interface ColorRepository extends JpaRepository<Color, Integer> {
 
@@ -18,4 +20,8 @@ public interface ColorRepository extends JpaRepository<Color, Integer> {
     @Query(value = "SELECT c FROM Color c" +
             " WHERE c.id = :id AND c.deletedAt IS NULL")
     Color findActiveById(@Param("id") Integer id);
+
+    @Query(value = "SELECT c FROM Color c" +
+            " WHERE c.label = :label AND c.deletedAt IS NULL")
+    Optional<Color> findActiveByLabel(@Param("label") String label);
 }

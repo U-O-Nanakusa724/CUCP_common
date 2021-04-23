@@ -22,4 +22,7 @@ public interface CarRepository extends JpaRepository<Car, Integer> {
 
     @Query(value = "SELECT c FROM Car c WHERE c.id = :id AND c.deletedAt IS NULL")
     Car findActiveById(@Param("id") Integer id);
+
+    @Query(value = "SELECT c FROM Car c WHERE c.name = :name AND c.deletedAt IS NULL")
+    Optional<Car> findActiveByName(@Param("name") String name);
 }

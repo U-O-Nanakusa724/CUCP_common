@@ -9,6 +9,8 @@ import org.springframework.stereotype.Repository;
 
 import biz.uoray.cucp.entity.Store;
 
+import java.util.Optional;
+
 @Repository
 public interface StoreRepository extends JpaRepository<Store, Integer> {
 
@@ -21,4 +23,7 @@ public interface StoreRepository extends JpaRepository<Store, Integer> {
 
     @Query(value = "SELECT s FROM Store s WHERE s.id = :id AND s.deletedAt IS NULL")
     Store findActiveById(@Param("id") Integer id);
+
+    @Query(value = "SELECT s FROM Store s WHERE s.name = :name AND s.deletedAt IS NULL")
+    Optional<Store> findActiveByName(@Param("name") String name);
 }
