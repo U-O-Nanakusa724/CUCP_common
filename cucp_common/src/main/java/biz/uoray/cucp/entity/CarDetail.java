@@ -32,7 +32,7 @@ public class CarDetail extends AbstractEntity {
     @Column(name = "distance")
     private String distance;
 
-    @Column(name = "transmission")
+    @Column(name = "mission")
     private String mission;
 
     @Column(name = "model_year")
