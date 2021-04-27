@@ -59,7 +59,7 @@ public class CarDetail extends AbstractEntity {
     @Column(name = "deleted_at")
     private Date deletedAt;
 
-    @OneToMany(mappedBy = "carDetail", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "carDetail", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Price> priceList;
 
     // Getter
