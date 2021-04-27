@@ -10,20 +10,20 @@ import java.util.Date;
 @Data
 @EqualsAndHashCode(callSuper=false)
 @Table(name = "prices")
-
 public class Price extends AbstractEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "car_detail_id")
     private CarDetail carDetail;
 
     @Column(name = "price")
     private double price;
 
+    @Temporal(TemporalType.DATE)
     @Column(name = "date")
     private Date date;
 
