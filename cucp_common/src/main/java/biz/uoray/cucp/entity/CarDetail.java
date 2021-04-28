@@ -35,6 +35,7 @@ public class CarDetail extends AbstractEntity {
     @Column(name = "mission")
     private String mission;
 
+    @Temporal(TemporalType.DATE)
     @Column(name = "model_year")
     private Date modelYear;
 
